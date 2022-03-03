@@ -20,16 +20,50 @@ window.onload =  function(event) {
   // Do all of your work inside the window.onload function (in other words, here!)
 
   // Part 1
+  let title = document.querySelector('#main-title')
+  title.innerText = `When you're here, you're family`
 
   // Part 2
+  document.querySelector('body').style.backgroundColor = 'orchid'
+  
 
   // Part 3
-
+  const favoriteThings = document.querySelector('#favorite-things')
+  favoriteThings.removeChild(favoriteThings.children[5]);
+  
   // Part 4
 
+
+  const specTitles = document.querySelectorAll('.special-title')
+  for (i = 0; i<specTitles.length; i++) {
+    specTitles[i].style.fontSize = '2rem';
+  }
+
+  
+
   // Part 5
+  const pastRaces = document.querySelector('#past-races')
+  pastRaces.removeChild(pastRaces.children[3])
+
 
   // Part 6
+  const newRace = document.createElement("li");
+  newRace.innerText = "Binghamton"
+  document.querySelector('#past-races').appendChild(newRace)
+  
 
   // Part 7
+  
+  const newPost = document.createElement('div')
+  const header = document.createElement('h1')
+  const blurb = document.createElement('p')
+  newPost.classList.add('bingo')
+  header.classList.add('town')
+  newPost.classList.add('blog-post', 'purple')
+  header.innerText = `Binghamton`
+  blurb.innerText = `I was in a high speed chase on parade day!`
+  document.querySelector('.main').appendChild(newPost)
+  document.querySelector('.bingo').appendChild(header)
+  document.querySelector('.town').appendChild(blurb)
+
 }
